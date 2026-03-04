@@ -114,6 +114,8 @@ def get_static(name):
 
 # Define route to delete an image
 @app.route("/delete/<imgname>", methods=["POST"])
+
+
 def delete_image(imgname):
     """
     Delete an image from the filesystem.
@@ -132,7 +134,7 @@ def delete_image(imgname):
         else:
             print(f"File not found: {fname}", file=sys.stderr)
     except OSError as err:
-        print(f"Filesystem error: {err}", file=sys.stderr)
+            print(f"Filesystem error: {err}", file=sys.stderr)
     return redirect("/")
 
 
