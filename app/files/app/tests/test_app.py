@@ -1,3 +1,4 @@
+
 """
 Test suite for In The Picture application.
 Tests basic functionality of routes and image handling.
