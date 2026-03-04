@@ -114,6 +114,8 @@ def get_static(name):
 
 
 # Define route to delete an image
+
+
 @app.route("/delete/<imgname>", methods=["POST"])
 def delete_image(imgname):
     """
