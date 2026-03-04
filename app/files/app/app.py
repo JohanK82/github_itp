@@ -112,13 +112,13 @@ def download(imgname):
 def get_static(name):
     return send_from_directory("static", name)
 
+
 # Define route to delete an image
 @app.route("/delete/<imgname>", methods=["POST"])
 def delete_image(imgname):
     """
     Delete an image from the filesystem.
     Redirects to home page after deletion.
-    Better navigation
     """
     # Sanitize filename to prevent path traversal attacks
     fname = secure_filename(imgname)
@@ -134,7 +134,7 @@ def delete_image(imgname):
     except OSError as err:
         print(f"Filesystem error: {err}", file=sys.stderr)
     return redirect("/")
- 
+
 
 # To keep the application running
 if __name__ == "__main__":
