@@ -5,15 +5,15 @@ Tests basic functionality of routes and image handling.
 These tests are designed to be "turn key" - students run them without
 modifying test code. Focus is on understanding CI/CD, not writing tests.
 """
-
 import pytest
 import os
 import sys
+from app import app as flask_app
+
 
 # Add app directory to Python path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'app')))
 
-from app import app as flask_app
 
 
 @pytest.fixture
