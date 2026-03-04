@@ -118,6 +118,7 @@ def delete_image(imgname):
     """
     Delete an image from the filesystem.
     Redirects to home page after deletion.
+    Better navigation
     """
     # Sanitize filename to prevent path traversal attacks
     fname = secure_filename(imgname)
