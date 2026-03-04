@@ -115,6 +115,7 @@ def delete_image(imgname):
     Better navigation
     """
 
+    
     # Sanitize filename to prevent path traversal attacks
     fname = secure_filename(imgname)
     file_path = join(app.config["UPLOAD_FOLDER"], fname)
